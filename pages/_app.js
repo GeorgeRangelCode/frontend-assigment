@@ -1,8 +1,11 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  }
+
   html {
-    font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
   }
@@ -26,7 +29,8 @@ const GlobalStyle = createGlobalStyle`
   .header {
     background: #1a80c7;
     color: white;
-    margin-bottom: 4em;
+    height: 60px;
+    padding: 2rem;
   }
 
   .main {
@@ -42,6 +46,14 @@ const GlobalStyle = createGlobalStyle`
     background: #1a80c7;
     color: white;
     margin-top: 4em;
+    height: 60px;
+    padding: 2rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .footer {
+      height: 150px;
+    }
   }
 
   .footer a:hover,
